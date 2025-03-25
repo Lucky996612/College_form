@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Student Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f2f5;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+        input, select, button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Student Registration</h2>
+        <p>Fill in the details below:</p>
+        <form id="studentForm">
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="phone" placeholder="Phone Number" required>
+            <input type="date" id="dob" required>
+            <select id="department" required>
+                <option value="">Select Department</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Mechanical Engineering">Mechanical Engineering</option>
+                <option value="Electrical Engineering">Electrical Engineering</option>
+                <option value="Civil Engineering">Civil Engineering</option>
+            </select>
+            <button type="submit">Register</button>
+        </form>
+        <p id="message" style="color: red; font-size: 14px;"></p>
+    </div>
+    <script>
+        document.getElementById("studentForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let fullName = document.getElementById("fullName").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let dob = document.getElementById("dob").value;
+            let department = document.getElementById("department").value;
+            
+            if (fullName === "" || email === "" || phone === "" || dob === "" || department === "") {
+                document.getElementById("message").innerText = "All fields are required.";
+                return;
+            }
+            
+            if (phone.length < 10 || isNaN(phone)) {
+                document.getElementById("message").innerText = "Enter a valid phone number.";
+                return;
+            }
+            
+            alert("Registration successful!");
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Student Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f2f5;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+        input, select, button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Student Registration</h2>
+        <p>Fill in the details below:</p>
+        <form id="studentForm">
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="phone" placeholder="Phone Number" required>
+            <input type="date" id="dob" required>
+            <select id="department" required>
+                <option value="">Select Department</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Mechanical Engineering">Mechanical Engineering</option>
+                <option value="Electrical Engineering">Electrical Engineering</option>
+                <option value="Civil Engineering">Civil Engineering</option>
+            </select>
+            <button type="submit">Register</button>
+        </form>
+        <p id="message" style="color: red; font-size: 14px;"></p>
+    </div>
+    <script>
+        document.getElementById("studentForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let fullName = document.getElementById("fullName").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let dob = document.getElementById("dob").value;
+            let department = document.getElementById("department").value;
+            
+            if (fullName === "" || email === "" || phone === "" || dob === "" || department === "") {
+                document.getElementById("message").innerText = "All fields are required.";
+                return;
+            }
+            
+            if (phone.length < 10 || isNaN(phone)) {
+                document.getElementById("message").innerText = "Enter a valid phone number.";
+                return;
+            }
+            
+            alert("Registration successful!");
+        });
+    </script>
+</body>
+</html>
